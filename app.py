@@ -2,7 +2,10 @@ from spin_http import Response
 
 
 def handle_request(request):
+    x = 99
 
-    return Response(200,
-                    {"content-type": "text/plain"},
-                    bytes(f"Hello from the Python SDK", "utf-8"))
+    return Response(
+        200,
+        {"content-type": "text/plain"},
+        bytes(f"Hello from the Python SDK ... {x}", "utf-8"),
+    )
